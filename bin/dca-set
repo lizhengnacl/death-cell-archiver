@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const conf = require('../conf.js');
+
+program.parse();
+
+conf.set(program.args[0]);

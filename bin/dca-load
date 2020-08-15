@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const store = require('../index.js');
+
+program.parse();
+store.load(program.args[0]);

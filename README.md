@@ -41,3 +41,5 @@ dca set "/Users/lizheng/Library/Application Support/Steam/userdata/314391335/588
 
 # 其他
 `dca`本质是一个外置的文件备份系统，其他通过文件存档的游戏，均可使用。
+
+记得针对具体游戏，设置游戏存档路径。

@@ -37,9 +37,16 @@ class Store {
 // 读取配置地址
 let config = conf.read();
 
+function resolvePath(pathName) {
+  // ~
+  if (pathName.indexOf('~') === 0) {
+    pathName = require('os').homedir() + pathName.slice(1);
+  }
+  return pathName;
+}
+
 let s = new Store({
-  // /Users/lizheng/Library/Application Support/Steam/userdata/314391335/588650/remote/user_0.dat
-  source: config.path,
+  source: resolvePath(config.path),
   target: path.resolve(__dirname, 'data'),
 });
 

@@ -29,14 +29,14 @@ dca load [name]
 
 默认值
 ```
-/Users/lizheng/Library/Application Support/Steam/userdata/314391335/588650/remote/user_0.dat
+~/Library/Application Support/Steam/userdata/314391335/588650/remote/user_0.dat
 ```
 
 自定义配置
 
 找到存档路径，配置更新（记得加引号）
 ```
-dca set "/Users/lizheng/Library/Application Support/Steam/userdata/314391335/588650/remote/user_0.dat"
+dca set "~/Library/Application Support/Steam/userdata/314391335/588650/remote/user_0.dat"
 ```
 
 # 其他

@@ -10,22 +10,22 @@ Roguelike，死亡重启。
 
 前方危机，比如碰上一个新BOSS，先存个档，死了再读档。
 
-##安装
+## 安装
 ```
 npm i death-cell-archiver -g
 ```
 
-##存档
+## 存档
 ```
 dca save [name]
 ```
 
-##读档
+## 读档
 ```
 dca load [name]
 ```
 
-##配置存档路径
+## 配置存档路径
 
 默认值
 ```
@@ -39,5 +39,5 @@ dca load [name]
 dca set "/Users/lizheng/Library/Application Support/Steam/userdata/314391335/588650/remote/user_0.dat"
 ```
 
-#其他
+# 其他
 `dca`本质是一个外置的文件备份系统，其他通过文件存档的游戏，均可使用。

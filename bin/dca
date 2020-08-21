@@ -7,5 +7,6 @@ program
   .version(package.version)
   .command('save', '存档')
   .command('load', '读档')
+  .command('list', '枚举')
   .command('set', '设置游戏存档路径')
   .parse(process.argv);

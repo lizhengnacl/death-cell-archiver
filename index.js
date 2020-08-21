@@ -1,6 +1,7 @@
 const path = require('path');
 const cpFile = require('cp-file');
 const conf = require('./conf');
+const {spawn} = require('child_process');
 
 class Store {
   constructor({source, target}) {
@@ -32,6 +33,15 @@ class Store {
     cpFile.sync(path.resolve(this.target, name), this.source,
       {overwrite: true});
   }
+
+  list(params) {
+    // data 文件列表，修改时间降序
+    const ls = spawn('ls', [`-${params || 'lht'}`, this.target]);
+
+    ls.stdout.on('data', (data) => {
+      console.log(data.toString());
+    });
+  }
 }
 
 // 读取配置地址
@@ -51,3 +61,5 @@ let s = new Store({
 });
 
 module.exports = s;
+
+// s.list()
